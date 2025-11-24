@@ -1,0 +1,15 @@
+{
+  "extends": "./tsconfig.app.json",
+  "compilerOptions": {
+    "noEmit": false,
+    "emitDeclarationOnly": true,
+    "outDir": "dist",
+    "declaration": true,
+    "declarationMap": true
+  },
+  "include": [
+    "src/components/ConsoleDebugWrapper/index.ts",
+    "src/components/ConsoleDebugWrapper/types/console-config.ts",
+    "src/components/ConsoleDebugWrapper/types/console-entry.ts"
+  ]
+}

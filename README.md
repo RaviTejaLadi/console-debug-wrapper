@@ -1,6 +1,48 @@
-# Professional Debug Console
+# @kalki/console-debug-wrapper
 
 A professional-grade debug console component inspired by React DevTools and Vue DevTools, designed for development environments.
+
+## Installation
+
+```bash
+npm install @kalki/console-debug-wrapper
+```
+
+or with yarn:
+
+```bash
+yarn add @kalki/console-debug-wrapper
+```
+
+## Peer Dependencies
+
+This library has `react`, `react-dom`, and `tailwindcss` as peer dependencies. You need to have them installed in your project.
+
+```bash
+npm install react react-dom tailwindcss
+```
+
+## Usage
+
+Wrap your application with the `ConsoleDebugWrapper` component. It will only be active in development mode.
+
+```tsx
+import { ConsoleDebugWrapper } from '@kalki/console-debug-wrapper';
+
+function App() {
+  return (
+    <ConsoleDebugWrapper>
+      <YourAppContent />
+    </ConsoleDebugWrapper>
+  );
+}
+```
+
+## Props
+
+| Prop       | Type              | Description                   |
+|------------|-------------------|-------------------------------|
+| `children` | `React.ReactNode` | The content of your application. |
 
 ## Features
 
@@ -62,20 +104,6 @@ ConsoleDebugWrapper/
 └── README.md                        # This file
 ```
 
-## Usage
-
-```tsx
-import ConsoleDebugWrapper from './features/ConsoleDebugWrapper/components/ConsoleDebugWrapper';
-
-function App() {
-  return (
-    <ConsoleDebugWrapper>
-      <YourAppContent />
-    </ConsoleDebugWrapper>
-  );
-}
-```
-
 ## Configuration
 
 The debug console can be configured through the settings panel:
@@ -129,4 +157,4 @@ When contributing to this component:
 
 ## License
 
-This component is part of the DevInterviewKit project and follows the same license terms.
+MIT

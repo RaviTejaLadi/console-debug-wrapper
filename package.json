@@ -1,26 +1,36 @@
 {
-  "name": "console-debug-wrapper",
-  "private": true,
-  "version": "0.0.0",
+  "name": "@kalki/console-debug-wrapper",
+  "description": "A React component that provides a console debug wrapper for your application in development.",
+  "private": false,
+  "version": "0.1.0",
   "type": "module",
+  "main": "./dist/console-debug-wrapper.umd.js",
+  "module": "./dist/console-debug-wrapper.es.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "vite build && tsc --project tsconfig.lib.json",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "prepublishOnly": "npm run build"
   },
   "dependencies": {
+    "prismjs": "^1.30.0"
+  },
+  "peerDependencies": {
     "@radix-ui/react-label": "^2.1.8",
     "@radix-ui/react-popover": "^1.1.15",
     "@radix-ui/react-scroll-area": "^1.2.10",
     "@radix-ui/react-select": "^2.2.6",
     "@radix-ui/react-slot": "^1.2.4",
     "@radix-ui/react-switch": "^1.2.6",
-    "@tailwindcss/vite": "^4.1.17",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "lucide-react": "^0.554.0",
-    "prismjs": "^1.30.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "tailwind-merge": "^3.4.0",
@@ -28,6 +38,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.39.1",
+    "@tailwindcss/vite": "^4.1.17",
     "@types/node": "^24.10.1",
     "@types/prismjs": "^1.26.5",
     "@types/react": "^19.2.5",
@@ -41,5 +52,18 @@
     "typescript": "~5.9.3",
     "typescript-eslint": "^8.46.4",
     "vite": "^7.2.4"
-  }
+  },
+  "keywords": [
+    "react",
+    "debug",
+    "console",
+    "developer-tools"
+  ],
+  "author": "Ravi Teja Ladi",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RaviTejaLadi/console-debug-wrapper"
+  },
+  "homepage": "https://github.com/RaviTejaLadi/console-debug-wrapper/tree/main/ConsoleDebugWrapper"
 }

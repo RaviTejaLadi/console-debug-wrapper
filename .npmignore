@@ -1,0 +1,20 @@
+# Storybook
+/storybook-static
+/src/**/*.stories.*
+
+# Test files
+/src/**/*.test.*
+/src/**/*.spec.*
+
+# Local config
+.env.local
+.env.*.local
+
+# Vite
+.vite
+
+# TS build info
+*.tsbuildinfo
+
+# node_modules
+node_modules
